@@ -1,21 +1,32 @@
+/* Base styling and layout */
 body {
-  background-color: #011627;
+  margin: 0;
+  height: 100vh;
   color: #ffffff;
   font-family: 'Fira Code', monospace;
   font-size: 1.2rem;
-  margin: 0;
-  height: 100vh;
 
-  /* Centering magic 🪄 */
+  /* Center the code block */
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  background-color: #011627; /* fallback if particles fail */
 }
 
+/* Code block styles */
 .code {
+  position: relative;
+  z-index: 1;
   text-align: left;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
 }
 
+/* Syntax colors */
 .code .orange {
   color: #ffcb6b;
   font-weight: bold;
@@ -34,6 +45,7 @@ body {
   font-style: italic;
 }
 
+/* Icon styles */
 .icons {
   margin: 1rem 0;
   font-size: 2rem;
@@ -43,7 +55,7 @@ body {
   margin-right: 1.5rem;
   text-decoration: none;
   color: white;
-  transition: transform 0.2s, color 0.2s;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .icons a:hover {

@@ -1,77 +1,64 @@
-/* Reset & Layout */
-html, body {
+/* Base styling and layout */
+body {
   margin: 0;
-  padding: 0;
-  height: 100%;
+  height: 100vh;
+  color: #ffffff;
   font-family: 'Fira Code', monospace;
-  color: white;
-  background-color: #0f2027;
-  overflow: hidden;
-}
+  font-size: 1.2rem;
 
-/* Particle background container */
-#particles-js {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  top: 0;
-  left: 0;
-}
-
-/* Main content centered */
-.content {
-  position: relative;
-  height: 100%;
+  /* Center the code block */
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1;
+  overflow: hidden;
+  background-color: #011627; /* fallback if particles fail */
 }
 
-/* Floating card styling */
-.card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
+/* Code block styles */
+.code {
+  position: relative;
+  z-index: 1;
+  text-align: left;
   padding: 2rem 3rem;
   border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-  text-align: left;
-  font-size: 1.2rem;
 }
 
 /* Syntax colors */
-.orange {
+.code .orange {
   color: #ffcb6b;
-  font-size: 1.8rem;
   font-weight: bold;
+  font-size: 1.8rem;
 }
 
-.red {
+.code .red {
   color: #ff6188;
 }
 
-.blue {
+.code .blue {
   color: #78dce8;
 }
 
-.italic {
+.code .italic {
   font-style: italic;
 }
 
-/* Social icons */
+/* Icon styles */
 .icons {
-  margin-top: 1rem;
-  font-size: 1.6rem;
+  margin: 1rem 0;
+  font-size: 2rem;
 }
 
 .icons a {
   margin-right: 1.5rem;
+  text-decoration: none;
   color: white;
-  transition: color 0.2s ease, transform 0.2s ease;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .icons a:hover {
-  color: #00ffe1;
   transform: scale(1.2);
+  color: #00ffe1;
 }
